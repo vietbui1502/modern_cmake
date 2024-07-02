@@ -11,6 +11,11 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(LIBARY_NAME "Library")
 set(EXECUTABLE_NAME "Blabla")
 
+set(CMAKE_MODULE_PATH "${PROJECT_SOURCE_DIR}/cmake/")
+include(AddGitSubmodule)
+
+add_git_submodule(external/json)
+
 add_subdirectory(configured)
 add_subdirectory(src)
 add_subdirectory(app)
